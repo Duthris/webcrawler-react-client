@@ -27,7 +27,7 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-const socket = io.connect("http://localhost:4000");
+const socket = io.connect("https://duthris-web-crawler.herokuapp.com");
 
 function App() {
   const classes = useStyles();
@@ -37,7 +37,7 @@ function App() {
   }
 
   const [link, setLink] = useState('');
-  const [workerAmount, setWorkerAmount] = useState();
+  const [workerAmount, setWorkerAmount] = useState('');
   const [links, setLinks] = useState([]);
 
   const isValidLink = (url) => {
